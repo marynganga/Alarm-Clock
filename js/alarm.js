@@ -1,25 +1,32 @@
 
 
-function CurrentTime(day, time){
-	this.day = moment().format("Do, MMMM, YYYY");
-	this.time = moment().format("h:mm:ss a");
-	this.both = this.day+', '+this.time;
-	}
+var datetime = null,
+        date = null,
+        day = null,
+        time = null;
 
-CurrentTime.prototype.update= function(now) {
-    // date = moment(new Date());
-    this.day = moment(new Date()).format("Do, MMMM, YYYY");
-  	this.time = moment(new Date()).format("h:mm:ss a");
-};
+function Time(){
+
 };
 
-// var now = new CurrentTime();
-	// console.log(now);
+Time.prototype.update = function () {
+	 $('.currentTime').empty();
+   date = moment(new Date())
+  // console.log(date)
+    var day = date.format('dddd, MMMM Do YYYY');
+    var time = date.format('h:mm:ss a');
+
+    $('.currentTime').append('<p>Today is: '+ day + ' the time is ' + time+'</p>');
+
+
+   // datetime.html(date.format('dddd, MMMM Do YYYY') +'time'+ date.format('h:mm:ss a'));
+   // datetime.html(day + ' the time is ' + time);
+};
 
 //A function to clear the input field after successful submission of a number.
 function clearForm(form) {
-    $(':input').not(':button, :submit').val('');
+    $('input').val('');
 };
 
-exports.timeModule = CurrentTime;
+exports.timeModule = Time;
 exports.formClearanceModule = clearForm;
