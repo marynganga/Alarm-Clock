@@ -10,23 +10,17 @@ function Time(){
 };
 
 Time.prototype.update = function () {
+	// Clear previously displayed time
 	 $('.currentTime').empty();
-   date = moment(new Date())
-  // console.log(date)
+	 // Assign current time to the date variable
+   	date = moment(new Date())
+   	// Format the date to display day and time separately
     var day = date.format('dddd, MMMM Do YYYY');
     var time = date.format('h:mm:ss a');
+    // Display current day and time
+    $('.currentTime').append('<p>'+ day +'<br />' +'The time is: ' + time+'</p>');
 
-    $('.currentTime').append('<p>Today is: '+ day + ' the time is ' + time+'</p>');
-
-
-   // datetime.html(date.format('dddd, MMMM Do YYYY') +'time'+ date.format('h:mm:ss a'));
-   // datetime.html(day + ' the time is ' + time);
 };
 
-//A function to clear the input field after successful submission of a number.
-function clearForm(form) {
-    $('input').val('');
-};
 
 exports.timeModule = Time;
-exports.formClearanceModule = clearForm;
