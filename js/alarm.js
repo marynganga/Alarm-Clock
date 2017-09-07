@@ -11,6 +11,10 @@ CurrentTime.prototype.update= function(now) {
     this.day = moment(new Date()).format("Do, MMMM, YYYY");
   	this.time = moment(new Date()).format("h:mm:ss a");
 };
+};
+
+// var now = new CurrentTime();
+	// console.log(now);
 
 //A function to clear the input field after successful submission of a number.
 function clearForm(form) {
