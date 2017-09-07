@@ -78,7 +78,7 @@ button {
 
 /*The Results Section Styles*/
 
-.countDown, .currentTime {
+.countDown, .currentTime, .setAlarm {
     margin: 15px;
     font-size: 25px;
     font-weight: bold;
@@ -90,8 +90,3 @@ button {
     font-size: 18px;
 }
 
-.showWeather{
-    margin-top: 30px;
-    font-size: 25px;
-    font-weight: bold;
-}

@@ -20,31 +20,35 @@ var Time = require('./../js/alarm.js').timeModule;
   		// Parse the new  date object into moment and format the date as desired
   		var alarmTime = moment(alarmDate).format('MMMM, Do YYYY, h:mm:ss a'); 
     	// Display the set alarm time
+    	$('.setAlarm').append('<p>The alarm is set for: '+alarmTime + '</p>');
     	$('.countDown').append('<p>The alarm is set for: '+alarmTime + '</p>');
     	// Clear the input field
     	$('#newAlarm').val('');
 
-    	// Calculate the time from now
-    	
-    	var countingDown = function(){
-    		$('.countDown').empty();
-    		var timeDiff = moment(alarmDate).fromNow();
-    		if (moment(timeDiff === "a few seconds ago" {
-    		alert('It\'s '+ alarmDate);
-    		console.log('equal');
-    	}
-    	else{
-    		console.log('not equal');
-    		
-    	}
-    	// Display time from now
-    	$('.countDown').append('<p>Time left : '+timeDiff + '</p>');
-    	};
-    	
-  		// Set interval for updating time difference
-   		setInterval(countingDown, 1000);
+    		// Calculate the time to alarm ring
+   		var countingDown = function(){
+   			$('.countDown').empty();
+       var timeDiff = moment(alarmDate).fromNow();
+       var timer = setInterval(function(){
+        // Display time left to the set alarm
+      $('.countDown').append('<p>Time left : '+timeDiff + '</p>');
+        if (timeDiff === "a few seconds ago") {
+       $('.countDown').empty();
+       alert('It\'s '+ alarmTime);
+       console.log('equal');
+       $('.countDown').empty();
+        $('.countDown').append('<p>'+'Time\'s up!!'+'</p>');
+         clearInterval(timer);
+      }
+      else{
+       console.log('not equal');
+       $('.countDown').empty();
+       $('.countDown').append('<p>Time left : '+timeDiff + '</p>');
+      }
+       },1000);
 
-
+};
+	countingDown();
 
     	// var x = moment(alarmTime).format('DD, MM, YYYY, HH:mm:ss'); 
     	// var y = moment(now.both).format('DD, MM, YYYY, HH:mm:ss'); 
@@ -56,6 +60,7 @@ var Time = require('./../js/alarm.js').timeModule;
     	// var difference = z.diff(f);	
     	// console.log(difference);
 
-    });
+   
 
 });
+  	});
