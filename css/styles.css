@@ -1,0 +1,97 @@
+/*General HTML Tags Styles*/
+
+body {
+    /*background-image: url("../assets/images/img4compressed.jpeg");*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: antiquewhite;
+    margin: auto;
+    font-size: 16px;
+    text-align: center;
+}
+
+h1,
+h4,
+h3,
+button {
+    font-family: 'Berkshire Swash', cursive;
+}
+
+a {
+    color: #630048;
+}
+
+
+/* Styles for the Title Section*/
+
+.container {
+    width: 80%;
+    margin: auto;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.jumbotron {
+    font-size: 30px;
+    background-color: rgba(214, 203, 211, 0.7);
+    width: 100%;
+    margin: 20px auto;
+    border: 3px solid #ccc;
+    box-shadow: 0px 0px 2px #ed9fd8;
+    z-index: 1;
+}
+
+/*.jumbotron h1 img {
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 2px solid rgb(113, 5, 12);
+    width: 200px;
+    height: auto;
+}*/
+
+
+/*Styles for the Alarm Section*/
+
+.alarmSection,{
+    background-color: rgba(236, 161, 166, 0.7);
+    border: 2px solid #ddd;
+    z-index: 2;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px #ed9fd8;
+    margin-bottom: 20px;
+}
+
+
+
+button {
+    display: inline-block;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #d6cbd3;
+    box-shadow: 0px 0px 10px #337ab7;
+
+}
+
+
+/*The Results Section Styles*/
+
+.countDown, .currentTime {
+    margin: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.countDown ul {
+    max-height: 200px;
+    overflow-y: scroll;
+    font-size: 18px;
+}
+
+.showWeather{
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
