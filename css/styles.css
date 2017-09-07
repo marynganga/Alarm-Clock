@@ -1,10 +1,6 @@
 /*General HTML Tags Styles*/
 
 body {
-    /*background-image: url("../assets/images/img4compressed.jpeg");*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-color: antiquewhite;
     margin: auto;
     font-size: 16px;
@@ -40,15 +36,6 @@ a {
     box-shadow: 0px 0px 2px #ed9fd8;
     z-index: 1;
 }
-
-/*.jumbotron h1 img {
-    margin-right: 20px;
-    padding-right: 20px;
-    border-right: 2px solid rgb(113, 5, 12);
-    width: 200px;
-    height: auto;
-}*/
-
 
 /*Styles for the Alarm Section*/
 

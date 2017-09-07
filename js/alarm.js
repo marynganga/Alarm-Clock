@@ -1,14 +1,12 @@
-
-
-var datetime = null,
-        date = null,
-        day = null,
-        time = null;
-
+//Global Variables
+var date = null,
+    day = null,
+    time = null;
+// Create Time constructor
 function Time(){
 
 };
-
+//Time prototype to update the current time
 Time.prototype.update = function () {
 	// Clear previously displayed time
 	 $('.currentTime').empty();
@@ -22,5 +20,5 @@ Time.prototype.update = function () {
 
 };
 
-
+// Export the time constructor to be used in the front end
 exports.timeModule = Time;
