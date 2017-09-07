@@ -50,27 +50,28 @@ var Time = require('./../js/alarm.js').timeModule;
   		var alarmTime = moment(alarmDate).format('MMMM, Do YYYY, h:mm:ss a'); 
     	// Display the set alarm time
     	$('.setAlarm').append('<p>The alarm is set for: '+alarmTime + '</p>');
-    	$('.countDown').append('<p>The alarm is set for: '+alarmTime + '</p>');
     	// Clear the input field
     	$('#newAlarm').val('');
 
-    		// Calculate the time to alarm ring
+    	// Calculate the time to alarm ring
    		var countingDown = function(){
-   			$('.countDown').empty();
        var timeDiff = moment(alarmDate).fromNow();
        var timer = setInterval(function(){
         // Display time left to the set alarm
+        $('.countDown').empty();
       $('.countDown').append('<p>Time left : '+timeDiff + '</p>');
         if (timeDiff === "a few seconds ago") {
        $('.countDown').empty();
        alert('It\'s '+ alarmTime);
+  		
        console.log('equal');
        $('.countDown').empty();
         $('.countDown').append('<p>'+'Time\'s up!!'+'</p>');
          clearInterval(timer);
+         var audio = new Audio('./assets/sounds/alarm.mp3');
+		audio.play();
       }
       else{
-       console.log('not equal');
        $('.countDown').empty();
        $('.countDown').append('<p>Time left : '+timeDiff + '</p>');
       }
