@@ -90,3 +90,60 @@ button {
     font-size: 18px;
 }
 
+
+/*Styles for the overlay section*/
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    visibility: hidden;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.open {
+    visibility: visible;
+}
+
+
+/*position the content inside the overlay*/
+
+.overlay-content {
+    position: relative;
+    top: 35%;
+    left: 30%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.overlay-content #text {
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.overlay-content #aboutHeader {
+    font-size: 40px;
+}
+
+
