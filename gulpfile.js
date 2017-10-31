@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var deploy = require('gulp-gh-pages');
 var concat = require('gulp-concat');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
@@ -112,4 +113,8 @@ gulp.task('bowerBuild', ['bower'], function(){
 gulp.task('htmlBuild', function(){
   browserSync.reload();
 });
-
+// Push to gh pages
+gulp.task('deploy',['build'],function(){
+  return gulp.src('./dist/**/*')
+    .pipe(deploy())
+})
